@@ -145,3 +145,45 @@ h4{
 	background:rgba(128,255,128,0.7);
 	color:#030;
 }
+
+/************************************************************
+                    Class Style
+************************************************************/
+
+/* target only on the ul in the nav*/
+nav ul{
+    display: flex;       
+    /*flex direction change the order of the object
+    default is now (horizintal) -row-reverse is backward horizontal
+    column will be stack (vertical) - column-reseverse will stack backwards vertical*/
+    flex-direction: row;
+    /* two values means top-bottom, left-right-0 does not need a unit*/
+    padding: 10px 0;
+    /* justify content postions along the main axis (by default,horizontal) 
+    the space-between. space-evenly, space-around try to distribute the elemts equally */
+    justify-content: space-evenly;
+    /*height: 100px;
+    flexbox can postion objtects both horizontal n vertical at the same time
+    align-item postions the elements along the cross-axis (by the default vertiacl) 
+    align-items: center;*/
+}
+
+nav ul li{
+    background-color:antiquewhite;     
+    /*flex-box will let the object stretch to fill up the space*/
+    flex-grow: 1;
+    /*flex-basic, set to 0,will tell the elements to ignore the content inside them*/
+    flex-basis: 0;
+}
+
+nav ul li a{
+    /*by default, links (a tag) are inline, meaning u can't set a width
+    change them to block elements to set a width*/
+    display: block;
+    text-align: center;
+    height: 100%;
+}
+
+nav ul li a:hover{
+    background-color: cornflowerblue;
+}
